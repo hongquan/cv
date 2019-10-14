@@ -28,7 +28,7 @@ Depending on your GNU/Linux distribution the package names may be different. Bas
 
 __On Arch Linux:__
 
-    $ sudo pacman -Sy texlive-core texlive-latexextra
+    $ sudo pacman -Sy texlive-core texlive-latexextra texlive-fontsextra
 
 __On Fedora:__
 
