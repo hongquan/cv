@@ -6,7 +6,7 @@
 % available at http://www.latex-project.org/lppl/.
 
 
-\documentclass[11pt,a4paper,sans]{moderncv}
+\documentclass[11pt,a4paper,sans,colorlinks,linkcolor=true]{moderncv}
 
 % moderncv themes
 \moderncvstyle{classic}
@@ -20,50 +20,81 @@
 
 % adjust the page margins
 \usepackage[scale=0.75]{geometry}
+\definecolor{arsenic}{rgb}{0.23, 0.27, 0.29}
+\definecolor{britishracinggreen}{rgb}{0.0, 0.26, 0.15}
+\definecolor{cadmiumgreen}{rgb}{0.0, 0.42, 0.24}
 
 % personal data
 \name{Nguyễn Hồng}{Quân}
-\address{Bà Rịa - Vũng Tàu}{Việt Nam}
+\address{}{Việt Nam}
 \phone[mobile]{+84 939 030 338}
 \email{ng.hong.quan@gmail.com}
 \homepage{quan.hoabinh.vn}
 \social[github]{hongquan}
 \social[gitlab]{quan}
 \social[linkedin]{bachkhois}
-\extrainfo{Birthday: 27/01/1987}
+\extrainfo{Birthyear: 1987}
 
 %----------------------------------------------------------------------------------
 %            content
 %----------------------------------------------------------------------------------
 \begin{document}
 %\begin{CJK*}{UTF8}{gbsn}
+\hypersetup{urlcolor=cadmiumgreen}
 %-----       resume       ---------------------------------------------------------
 \makecvtitle
 
 \section{Experience}
 \subsection{Vocational}
+
 \cventry{03/2016 -- current}{Co-founder \& CTO}{AgriConnect Digital Agriculture Ltd}{Ho Chi Minh City, Viet Nam}{}{
   \begin{itemize}
     \item Design software architecture of the automatic growing house for mushroom, vegetable, swiftlet house.
     \item Main coder for the project. The software can run both on cloud server and embedded computer like BeagleBone.
     \item Develop company’s website \href{https://agriconnect.vn}{agriconnect.vn}.
-    \item Setup continuous delivery for the project, using Fabric, Ansible, GitLab 	CI, Docker.
+    \item Setup continuous delivery for the project, using Fabric, Ansible, GitLab CI, Docker.
     \item Prebuild open source softwares for ARM platform, hosting at a \href{https://repo.fury.io/agriconnect/}{self-maintained repository}, to make it easy to deploy softwares to ARM boards.
     \item Develop embedded software for sensor nodes, which use Arduino, ESP8266, ESP32.
     \item Contribute code to various open source software projects.
-    \item Have a talk at FOSSASIA Summit 2017, to share experience in 	developing software for automatic mushroom farm.
+    \item Have a talk at FOSSASIA Summit 2017, to share experience in developing software for automatic mushroom farm.
   \end{itemize}}
+
 \cventry{05/2016 -- present}{Member}{FOSSASIA, an organization about open technology}{}{}{
   \begin{itemize}
     \item Student mentor for Google Summer of Code, 2016, 2017, 2018.
-    \item Contribute to SUSI Smart Speaker project: Review code; redefine the 	code base, to make it stable (before I join, even the install script doesn’t 	work); reduce installation size; make script to build OS image 	automatically.
-    \item Have some talks on behalf of FOSSASIA to introduce open source 	software, programming.
+    \item Contribute to SUSI Smart Speaker project: Review code; redefine the code base, to make it stable (before I join, even the install script doesn’t 	work); reduce installation size; make script to build OS image 	automatically.
+    \item Have some talks on behalf of FOSSASIA to introduce open source software and programming.
   \end{itemize}}
+
 \cventry{05/2013 -- 01/2017}{Software Developer}{EasyUni Sdn. Bhd.}{Kuala Lumpur, Malaysia}{}{
   \begin{itemize}
-    \item Develop company-owned website \href{https://www.easyuni.com}{www.easyuni.com}. Implement 	various features for the website, according to business need.
+    \item Develop company-owned website (\href{https://www.easyuni.com}{www.easyuni.com}). Implement various features for the website, according to business need.
     \item Lead development of \href{http://www.proficeo.com/coach-and-grow-program/}{Coach and Grow Program} internal web platform.
   \end{itemize}}
+
+\cventry{02/2012 – 04/2013}{Software Developer}{MBM International}{Can Tho, Viet Nam}{}{
+  \begin{itemize}
+    \item Join \href{www.opensc-project.org}{OpenSC}, an open source smart card library, take part in improving OpenPGP card support.
+    \item Develop several modules for OpenWrt, a Linux-based firmware for wifi router.
+    \item Develop a pairs of web app + Android app.
+    \item Maintain customer's website (\href{http://www.expat-advisory.com/}{www.expat-advisory.com}).
+    \item Talk at GNOME Asia Summit 2012, Hong Kong.
+  \end{itemize}}
+
+\cventry{08/2010 – 01/2012}{Software Developer}{FPT Software}{Ho Chi Minh City, Viet Nam}{}{
+  \begin{itemize}
+    \item Took part in an embedded software project about NFC software stack for NFC chipsets.
+    \item Wrote several facility tools (programs) to increase productivity.
+  \end{itemize}}
+
+\section{Education}
+\cventry{2004--2009}{Mechatronics}{Ho Chi Minh City University of Technology}{}{}{PFIEV program (Programme de Formation d'Ingénieurs d'Excellence au Vietnam).\newline Graduation thesis: Study on Design of 2D Ocean Wave Maker
+  \begin{itemize}
+    \item Collect related theories in Fluid Mechanics and differential equations describing water wave created by the wave maker.
+    \item Create a prototy machine.
+  \end{itemize}
+}
+
 \end{document}
 
 
