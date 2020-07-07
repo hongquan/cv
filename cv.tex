@@ -6,160 +6,64 @@
 % available at http://www.latex-project.org/lppl/.
 
 
-\documentclass[11pt,a4paper,sans]{moderncv}   % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+\documentclass[11pt,a4paper,sans]{moderncv}
 
 % moderncv themes
-\moderncvstyle{classic}                       % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
-\moderncvcolor{blue}                          % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
-%\renewcommand{\familydefault}{\sfdefault}    % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
-\nopagenumbers{}                             % uncomment to suppress automatic page numbering for CVs longer than one page
+\moderncvstyle{classic}
+\moderncvcolor{blue}
+\nopagenumbers{}
 
 % character encoding
-\usepackage[utf8]{inputenc}                  % if you are not using xelatex ou lualatex, replace by the encoding you are using
-%\usepackage{CJKutf8}                         % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+\usepackage[utf8]{inputenc}
+\usepackage{fontspec}
+%\usepackage{CJKutf8}
 
 % adjust the page margins
 \usepackage[scale=0.75]{geometry}
-%\setlength{\hintscolumnwidth}{3cm}           % if you want to change the width of the column with the dates
-%\setlength{\makecvheadnamewidth}{10cm}      % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
 
 % personal data
-\name{Alan}{Orth}
-%\title{A great man}                          % optional, remove / comment the line if not wanted
-% \address{Nairobi}{Kenya}    % optional, remove / comment the line if not wanted
-\phone[mobile]{+962 795 430 089}                     % optional, remove / comment the line if not wanted
-\email{aorth@mjanja.ch}                          % optional, remove / comment the line if not wanted
-\homepage{mjanja.ch}                    % optional, remove / comment the line if not wanted
-\social[github]{alanorth}                    % optional, remove / comment the line if not wanted
-%\extrainfo{additional information}            % optional, remove / comment the line if not wanted
-%\quote{The quieter you become, the more you are able to hear...}                            % optional, remove / comment the line if not wanted
+\name{Nguyễn Hồng}{Quân}
+\address{Bà Rịa - Vũng Tàu}{Việt Nam}
+\phone[mobile]{+84 939 030 338}
+\email{ng.hong.quan@gmail.com}
+\homepage{quan.hoabinh.vn}
+\social[github]{hongquan}
+\social[gitlab]{quan}
+\social[linkedin]{bachkhois}
+\extrainfo{Birthday: 27/01/1987}
 
-% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
-%\makeatletter
-%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
-%\makeatother
-
-% bibliography with mutiple entries
-%\usepackage{multibib}
-%\newcites{book,misc}{{Books},{Others}}
 %----------------------------------------------------------------------------------
 %            content
 %----------------------------------------------------------------------------------
 \begin{document}
-%\begin{CJK*}{UTF8}{gbsn}                     % to typeset your resume in Chinese using CJK
+%\begin{CJK*}{UTF8}{gbsn}
 %-----       resume       ---------------------------------------------------------
 \makecvtitle
 
 \section{Experience}
 \subsection{Vocational}
-\cventry{2016--current}{Systems Consultant}{International Livestock Research Institute}{}{}{Technical management of institutional repository and research-computing infrastructure\newline{}
+\cventry{03/2016 -- current}{Co-founder \& CTO}{AgriConnect Digital Agriculture Ltd}{Ho Chi Minh City, Viet Nam}{}{
   \begin{itemize}
-  \item Maintain and deploy source code customizations of the \href{https://cgspace.cgiar.org}{CGSpace} application
-  \item Manage Linux server and software stack for development and production instances of the CGSpace application
-  \item Communicate with content submitters and editors about quality and scope of metadata in the repository
-  \item Create tools to perform automated validation and correction of metadata in the repository
-  \item Inform stakeholders on developments and upcoming features in the upstream DSpace open-source software project
-  \item Work with partners on integration with the repository and advise on best practices
-  \item Support distributed research-computing infrastructure used for bioinformatics applications
-  \item Automate role-based infrastructure deployment and configuration management using Ansible
-  \item Advise ICT manager on strategic decisions about platform direction
+    \item Design software architecture of the automatic growing house for mushroom, vegetable, swiftlet house.
+    \item Main coder for the project. The software can run both on cloud server and embedded computer like BeagleBone.
+    \item Develop company’s website \href{https://agriconnect.vn}{agriconnect.vn}.
+    \item Setup continuous delivery for the project, using Fabric, Ansible, GitLab 	CI, Docker.
+    \item Prebuild open source softwares for ARM platform, hosting at a \href{https://repo.fury.io/agriconnect/}{self-maintained repository}, to make it easy to deploy softwares to ARM boards.
+    \item Develop embedded software for sensor nodes, which use Arduino, ESP8266, ESP32.
+    \item Contribute code to various open source software projects.
+    \item Have a talk at FOSSASIA Summit 2017, to share experience in 	developing software for automatic mushroom farm.
   \end{itemize}}
-\cventry{2011--2016}{Systems Analyst}{International Livestock Research Institute}{Nairobi, Kenya}{}{Oversee research-computing infrastructure and support scientists\newline{}
+\cventry{05/2016 -- present}{Member}{FOSSASIA, an organization about open technology}{}{}{
   \begin{itemize}
-  \item Automate role-based infrastructure deployment and configuration management using Ansible
-  \item Design and implement next-generation storage and computing platform using GlusterFS, SLURM, and 389 LDAP
-  \item Deploy KVM virtual machines for students, web applications, and test environments
-  \item Implement and maintain tape backups of research data using Amanda Backup
-  \item Maintain and deploy source code customizations of the \href{https://cgspace.cgiar.org}{CGIAR DSpace} institutional repository
-  \item Install and configure bioinformatics applications like BLAST+, QIIME, structure, and R
-  \item Deploy field data collection system using Android and ODK Collect/Aggregate
-  \item Give introduction to Linux courses and hold regular user group meetings
+    \item Student mentor for Google Summer of Code, 2016, 2017, 2018.
+    \item Contribute to SUSI Smart Speaker project: Review code; redefine the 	code base, to make it stable (before I join, even the install script doesn’t 	work); reduce installation size; make script to build OS image 	automatically.
+    \item Have some talks on behalf of FOSSASIA to introduce open source 	software, programming.
   \end{itemize}}
-\cventry{2009--2011}{Linux Consultant}{International Livestock Research Institute}{Nairobi, Kenya}{}{{}
+\cventry{05/2013 -- 01/2017}{Software Developer}{EasyUni Sdn. Bhd.}{Kuala Lumpur, Malaysia}{}{
   \begin{itemize}
-  \item Administer Rocks Linux cluster and bioinformatics applications
-  \item Provide technical support on network and server issues to Biotechnology group
-  \item Administer physical and virtual servers for students and researchers
-  \item Develop modules to supplement functionality of off-the-shelf LIMS
-  \item Develop standard operating procedures and train staff in their use
+    \item Develop company-owned website \href{https://www.easyuni.com}{www.easyuni.com}. Implement 	various features for the website, according to business need.
+    \item Lead development of \href{http://www.proficeo.com/coach-and-grow-program/}{Coach and Grow Program} internal web platform.
   \end{itemize}}
-\cventry{2007--2009}{Lecturer and Systems Administrator}{Holy Rosary College}{Tala, Kangundo}{}{Volunteer with VSO Jitolee, Kenya\newline{}
-\begin{itemize}
-\item Manage and update Linux servers running Squid proxy, Apache, and Samba file services
-\item Troubleshoot satellite modem, routers, network cables, and LAN switches
-\item Maintain workstations for staff and student computer lab
-\item Taught courses:
-  \begin{itemize}
-  \item Intro to Programming and Algorithms (C++)
-  \item Network Essentials
-  \item Object-oriented Programming (C++)
-  \item Operating Systems II (Linux)
-  \end{itemize}
-\end{itemize}}
-\cventry{2004--2007}{Systems Administrator}{Upward Bound Organization}{Chico, CA}{}{{}
-\begin{itemize}
-\item Manage Mac OS X servers running Apache, Mailman, and OpenLDAP
-\item Manage student computer lab and network-attached student home directories
-\item Monitor security of public-facing servers, including remote administration over SSH
-\item Technical support and maintenance of staff workstations
-\item Write documentation of configuration and maintenance procedures for servers
-\item Interview and train replacement systems administrator upon my departure
-\end{itemize}}
-
-\subsection{Internships}
-\cventry{June, 2006}{Systems Administrator}{Chevron Corporation}{San Ramon, CA}{}{Three-month internship with the Technical Computing team\newline{}
-\begin{itemize}
-\item Write interactive Perl script to help administrators maintain synchronized application repositories on distributed Linux and Solaris servers
-\item Write interactive Perl script to ease installation and configuration of high-performance cluster nodes using SystemImager
-\end{itemize}}
-
-\cventry{June, 2005}{Systems Analyst}{Chevron Corporation}{San Ramon, CA}{}{Three-month internship with the Application Server Design team\newline{}
-\begin{itemize}
-\item Install and support Windows 2000/2003 servers and their web applications (.NET)
-\item Write documentation in preparation for annual team audit (SOX)
-\item Document F5 BIG-IP DNS settings used for fail over and geographic load balancing for internal and external corporate web applications
-\end{itemize}}
-
-\section{Education}
-\cventry{2002--2007}{Computer Information Systems}{California State University}{Chico}{\textit{3.19}}{Emphasis on Computer Science, minor in Business}  % arguments 3 to 6 can be left empty
-
-\section{Computer skills}
-\cvitem{Proficient}{vim, KVM, git, bash, regular expressions, HTML, CSS, Apache httpd, mod\_rewrite, nginx, Ansible}
-\cvitem{Intermediate}{MySQL, PostgreSQL, PHP, Apache Tomcat, gerrit, TLS, Jinja2, Python, Solr}
-\cvitem{Padawan}{\LaTeX}
-
-\section{Languages}
-\cvitemwithcomment{English}{Native}{Written and spoken}
-\cvitemwithcomment{Swahili}{Intermediate}{Written and spoken}
-\cvitemwithcomment{Bulgarian}{Intermediate}{Written and spoken}
-\cvitemwithcomment{Arabic}{Beginner}{Written and spoken}
-
-\section{Interests}
-\cvitem{Android}{Porting Android to new devices}
-\cvitem{Open-source}{Contributing to open-source software projects}
-\cvitem{Community}{\href{https://nairobilug.or.ke}{Nairobi GNU/Linux Users Group}}
-\cvitem{Blogging}{\href{https://englishbulgaria.net}{englishbulgaria.net}, \href{https://alaninkenya.org}{alaninkenya.org}, \href{https://mjanja.ch}{mjanja.ch}, \href{https://picturingjordan.com/}{picturingjordan.com}}
-\cvitem{GNU/Linux}{Arch Linux, CentOS, Debian, Fedora, Gentoo, Ubuntu}
-\cvitem{The Universe}{The Sloan Great Wall, The Huge-Large Quasar Group, 42}
-\cvitem{Reading}{Books about history, science, and the history of religion}
-
-%\renewcommand{\listitemsymbol}{-~}            % change the symbol for lists
-
-% Publications from a BibTeX file without multibib
-%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
-%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
-%\nocite{*}
-%\bibliographystyle{plain}
-%\bibliography{publications}                   % 'publications' is the name of a BibTeX file
-
-% Publications from a BibTeX file using the multibib package
-%\section{Publications}
-%\nocitebook{book1,book2}
-%\bibliographystylebook{plain}
-%\bibliographybook{publications}              % 'publications' is the name of a BibTeX file
-%\nocitemisc{misc1,misc2,misc3}
-%\bibliographystylemisc{plain}
-%\bibliographymisc{publications}              % 'publications' is the name of a BibTeX file
 \end{document}
 
 
