@@ -4,6 +4,6 @@ A CV written in LaTeX using the [moderncv](http://www.ctan.org/pkg/moderncv) cla
 
 ## How to compile
 
-- Install `texlive-latex-extra`, `texlive-fonts-extra` packages in Ubuntu.
+- Install `texlive-luatex`, `texlive-latex-extra`, `texlive-fonts-extra` packages in Ubuntu.
 
 - Run `make`.
